@@ -1,0 +1,15 @@
+[package]
+name = "ck_tcp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# tokio = { version = "1.21.2", features = ["full"] }
+# serde = { version = "1.0.147", features = ["derive"] }
+
+# clickhouse tcp
+# 直接应用库编译时依赖冲突
+# clickhouse-rs = { git = "https://github.com/suharev7/clickhouse-rs", features = ["default"]}
+clickhouse-rs = { path = "../../clickhouse-rs", features = ["default"]}

@@ -1,0 +1,18 @@
+[package]
+name = "ck_dependency_conflict_sample"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace]
+members = [
+    "ck_tcp",
+    "ck_http",
+]
+
+[dependencies]
+tokio = { version = "1.21.2", features = ["full"] }
+ck_tcp = { path= "./ck_tcp" }
+ck_http = { path = "./ck_http" }
+
